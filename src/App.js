@@ -1,7 +1,14 @@
 import { useState } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 import SearchBar from "./components/SearchBar";
 import SearchResults from "./components/SearchResults";
+import StopDetails from "./components/StopDetails";
 
 import './App.css';
 
@@ -18,14 +25,23 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <SearchBar
-        searchQuery={searchQuery}
-        handleQueryChange={handleQueryChange}
-        onClickSearch={onClickSearch}
-      />
-      <SearchResults results={results}/>
-    </div>
+    <Router>
+      <div className="App">
+        <Switch>
+            <Route exact path="/">
+              <SearchBar
+              searchQuery={searchQuery}
+              handleQueryChange={handleQueryChange}
+              onClickSearch={onClickSearch}
+              />
+              <SearchResults results={results}/>
+            </Route>
+            <Route path="/stop_details">
+              <StopDetails />
+            </Route>
+          </Switch>
+      </div>
+    </Router>
   );
 }
 
