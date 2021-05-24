@@ -3,6 +3,7 @@ import { useState } from 'react';
 import SearchBar from "./components/SearchBar";
 import SearchResults from "./components/SearchResults";
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {

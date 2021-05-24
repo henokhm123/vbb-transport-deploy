@@ -1,4 +1,10 @@
 import SearchResultCard from "./SearchResultCard";
+import Container from 'react-bootstrap/Container';
+
+
+
+
+
 
 function SearchResults(props){
   const {results} = props;
@@ -10,7 +16,12 @@ function SearchResults(props){
       <>
         {results.map(item => {
           return (
-            <SearchResultCard item={item} key={item.id}/>
+            <Container >  
+              
+                <SearchResultCard item={item} key={item.id}/>   
+                       
+            </Container>
+
           )
         })}
       </>
