@@ -37,7 +37,7 @@ function App() {
               />
               <SearchResults results={results}/>
             </Route>
-            <Route path="/stop_details">
+            <Route path="/stop_details/:id">
               <StopDetails />
             </Route>
           </Switch>

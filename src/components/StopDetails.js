@@ -1,10 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useHistory, useParams } from "react-router-dom";
+
 
 function StopDetails(props){
-  const {stop} = props;
+  const { id } = useParams()
+
   return (
     <div >
-      <p>Stop details for stop with Id {/*stop.id*/}</p>
+      <p>Stop details for stop with Id {id}</p>
       <Link to="/">
         <button>Back</button>
       </Link>

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
@@ -15,7 +17,9 @@ function SearchResultCard(props){
           <Card.Text>
             With supporting text below as a natural lead-in to additional content.
           </Card.Text>
-          <Button variant="primary">Stop Details</Button>
+          <Link to={`/stop_details/${item.id}`}>
+            <Button variant="primary">Stop Details</Button>
+          </Link>
         </Card.Body>
     </Card>
   )
