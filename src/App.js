@@ -22,7 +22,7 @@ function App() {
     let url = `https://v5.vbb.transport.rest/locations?query=${searchQuery}`;
     fetch(url).then(response => response.json())
               .then(data => setResults(data));
-    setSearchQuery("");
+    // setSearchQuery("");
   };
 
   return (
@@ -35,7 +35,7 @@ function App() {
               handleQueryChange={handleQueryChange}
               onClickSearch={onClickSearch}
               />
-              <SearchResults results={results}/>
+              <SearchResults results={results} />
             </Route>
             <Route path="/stop_details/:id">
               <StopDetails />
