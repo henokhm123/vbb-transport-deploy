@@ -16,6 +16,7 @@ function SearchResults(props){
             </Container>
           )
         })}
+        {/* <pre>{JSON.stringify(results, null, 4)}</pre> */}
       </>
     );
   }

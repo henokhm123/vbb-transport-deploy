@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  margin: 4rem;
 }
 
 .searchDiv {
@@ -39,4 +39,38 @@
 .searchButton:hover img, 
 .searchButton:focus img {
   transform: scale(1.3);
+}
+
+.card {
+  margin-bottom: 2rem;
+}
+
+.stopDetailLabel {
+  color: #444;
+  margin-right: .5rem;
+
+}
+
+.stopDetailValue {
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.transportMode {
+  margin-right: 1rem;
+  padding: 0.25rem;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #9465e0;
+  font-weight: bold;
+  font-size: .75rem;
+  text-transform: uppercase;
+}
+
+
+.nextStop {
+  background-color: #ddeaf5;
+  padding: 1rem;
+  margin-top: 2rem; 
+  border-radius: 10px;
 }

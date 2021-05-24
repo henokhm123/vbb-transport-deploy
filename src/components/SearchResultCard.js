@@ -3,19 +3,37 @@ import { Link } from "react-router-dom";
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
-
-
 function SearchResultCard(props){
   const {item} = props;
   return (
-    // <div className="CardContainer">
-    //   <h2>{item.name}</h2>
-    // </div>
     <Card>
       <Card.Header>{item.name}</Card.Header>
         <Card.Body>
           <Card.Text>
-            With supporting text below as a natural lead-in to additional content.
+            <p>
+              <span className="stopDetailLabel">
+                Type: 
+              </span>
+              <span className="stopDetailValue">
+                {item?.type}
+              </span>
+            </p>
+            <p>
+              <span className="stopDetailLabel">
+                Latitude: 
+              </span>
+              <span className="stopDetailValue">
+                {item?.location?.latitude}
+              </span>
+            </p>
+            <p>
+              <span className="stopDetailLabel">
+                Longitude: 
+              </span>
+              <span className="stopDetailValue">
+                {item?.location?.longitude}
+              </span>
+            </p>
           </Card.Text>
           <Link to={`/stop_details/${item.id}`}>
             <Button variant="primary">Stop Details</Button>
