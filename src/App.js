@@ -10,6 +10,7 @@ import SearchBar from "./components/SearchBar";
 import SearchResults from "./components/SearchResults";
 import StopDetails from "./components/StopDetails";
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {
